@@ -1,0 +1,267 @@
+@import 'config';
+
+@mixin set-flex($content: center, $direction: row) {
+    display: flex;
+    justify-content: $content;
+    align-items: center;
+    // text-align: center;
+    flex-direction: $direction;
+}
+
+header {
+    position: sticky;
+    top: 0px;
+    @include set-flex(space-between);
+    padding: 20px 10%;
+    background-color: $header-bg-color;
+    color: $header-color;
+    h2 {
+        font-family: $logo-font;
+        font-weight: 400;
+    }
+
+    a {
+        color: inherit;
+    }
+
+    nav {
+        @include set-flex();  
+        li {
+            font-family: $bangla-font;
+            padding: 0 5px;
+
+            .download {
+                // padding-right: 10px;
+                padding: 0 15px;
+                border: 2px solid white;
+                border-radius: 15px;
+
+                &:hover {
+                    background-color: white;
+                    color:  #382933;
+                }
+            }
+        }
+
+        a:hover {
+            color: #ffe05d;
+        }
+    }
+
+    @media screen and (max-width: $tablet){
+        flex-direction: column;
+        h2 {
+            margin-bottom: 5px;
+        }
+        nav {
+            li {
+                padding: 0 2px;
+            }
+        }
+    }
+}
+    
+
+.container {
+    max-width: 1100px;
+    padding: 0 30px;
+    margin: 0 auto; 
+}
+
+#about {
+    margin-top: 30px;
+    .intro {
+        @include set-flex();
+        text-align: center;
+        margin-bottom: 70px;
+        p {
+            font-family: $bangla-font;
+            font-size: calc(18px + .75vw);
+
+            .brand-name {
+                font-family: $source-sans;
+                font-size: calc(20px + .75vw);
+                color:  #382933;
+            }
+
+            .intro-style {
+                color: #e23e57;
+                font-family: $roboto;
+            }
+        }
+    }
+    
+    .section {
+        @include set-flex();
+        margin-bottom: 200px;
+        @media screen and (max-width: $tablet) {
+            flex-direction: column;
+            margin-bottom: 50px;
+
+        }
+
+    }
+
+    .links {
+        @include set-flex(space-evenly, );
+        margin-bottom: 30px;
+        .facebook {
+            img{
+             //    border: 1px black solid;
+                 border-radius: 15px;
+                 margin-right: 25px;
+            }
+        }
+    }
+
+    @media screen and (max-width: $tablet){
+        .links {
+            flex-direction: column;
+            img {
+                max-width: 100%;
+            }
+        }
+        
+    }
+}
+
+.text {
+    font-family: $montserrat;
+    @include set-flex(center, column);
+    text-align: center;
+    padding: 0 30px;
+    font-family: $text-font;
+
+    .title {
+        font-size: calc(20px + 1.5vw);
+        margin-bottom: 20px;
+    }
+
+    .subtitle {
+        font-size: calc(15px + 0.5vw);
+        line-height: 150%;
+    }
+}
+
+.images img {
+    max-width: 650px;
+    max-height: 500px;
+
+    @media screen and (max-width:$tablet){
+        max-width: 325px;
+        max-height: 250px;
+    }
+}
+
+#solution {
+    @include set-flex(center, column);
+    text-align: center;
+    margin-bottom: 50px;
+    img {
+        max-width: 650px;
+        max-height: 500px;
+
+        @media screen and (max-width: $tablet) {
+            max-width: 325px;
+            max-height: 250px;
+        }
+    }
+
+    .text {
+        line-height: 150%;
+        .sale {
+            font-style: italic;
+        }
+    }
+
+    .section {
+        @include set-flex(center, row);
+        text-align: center;
+
+        .text-style {
+            color:  #e23e57;
+        }
+
+        @media screen and (max-width: $tablet){
+            flex-direction: column;
+
+            .dealer-text{
+                order: 1;
+            }
+            .dealer-img{
+                order: 2;
+            }
+            .text {
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+
+
+#contact {
+    @include set-flex(center, column);
+    text-align: center;
+    .contact-img {
+        margin-bottom: 20px;
+        
+        img {
+            @media screen and (max-width: $tablet) {
+            max-width: 325px;
+            max-height: 250px;
+        }
+    }
+    }
+
+    p {
+        font-family: $roboto;
+        font-size: calc(20px + .25vw);
+        margin-bottom: 20px;
+    }
+    
+    .email a {
+        color: #321f28;
+    
+        &:hover {
+            color: lighten( #321f28, 10%);
+        }
+    }
+    
+   .links {
+        @include set-flex(space-evenly, row);   
+
+       .facebook {
+           img{
+            //    border: 1px black solid;
+                border-radius: 15px;
+                margin-right: 25px;
+           }
+       }
+
+       
+           @media screen and (max-width: $tablet) {
+            flex-direction: column;    
+            img {
+                    max-width: 100%;
+                }
+           }
+    
+   }
+}
+
+footer {
+    background-color: $footer-bg-color;
+    color: $footer-color;
+    font-family: $roboto;
+    height: 50px;
+    @include set-flex();
+    
+    p {
+        margin-left: 10px;
+    }
+
+    a {
+        color: inherit;
+    }
+}
+

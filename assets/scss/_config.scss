@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Da+2&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+// font family variables
+$montserrat: 'Monsterrat', sans-serif;
+$baloo: 'Baloo Da 2', cursive;
+$source-sans: 'Source Sans Pro', sans-serif;
+$roboto: 'Roboto', sans-serif;
+
+$title-font: $source-sans;
+$subtitle-font: $source-sans;
+$text-font: $source-sans;
+$bangla-font: $baloo;
+
+$logo-font: $montserrat;
+
+$footer-font: $roboto;
+
+$header-bg-color: #382933;
+$header-color: #FFFFFF;
+$footer-bg-color: #382933;
+$footer-color: #FFFFFF;
+
+$tablet: 820px;
+$mobile: 480px;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+}
