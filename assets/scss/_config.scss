@@ -31,7 +31,9 @@ $mobile: 480px;
     margin: 0;
     padding: 0;
 }
-
+html {
+    scroll-behavior: smooth;
+}
 li {
     list-style: none;
     display: inline-block;
